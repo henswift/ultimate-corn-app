@@ -1,10 +1,8 @@
 .App {
   text-align: center;
-  overflow: hidden;
 }
 
-.App-link {
-  color: #61dafb;
+a {
   text-decoration: none;
 }
 
@@ -19,16 +17,6 @@
   color: white;
 }
 
-.Header {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  background-color: #3d4451;
-}
-
 .Home-tab {
   height: 2000px;
   width: 100%;
@@ -36,29 +24,44 @@
   justify-content: center;
 }
 
-.H-one {
-  font-size: large;
-}
-
 .Footer {
   width: 100%;
   display: flex;
   position: sticky;
   bottom: 0;
-  background-color: #3d4451;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.Footer h3 {
+.Footer h4 {
   margin: 0;
-  padding: 15px 25px;
+  padding: 10px 20px;
   color: white;
-  border-left: solid 1px #282c34;
-  border-left: solid 1px #282c34;
-  text-decoration: none;
+  justify-content: center;
+  flex-grow: 1;
+  background-color: #282c34;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+}
+
+.Footer h4:hover {
+  margin: 0;
+  padding: 10px 20px;
+  color: #282c34;
+  justify-content: center;
+  flex-grow: 1;
+  background-color: white;
+  border-radius: 10px;
 }
 
 .Footer-links {
   display: flex;
-  justify-content: space-around;
-  width: 100%;
+  align-items: stretch;
+  justify-content: space-between;
+  width: 90%;
+  border-radius: 20px;
+  background-color: #3d4451;
+  margin-bottom: 20px;
+  padding: 10px 10px;
 }

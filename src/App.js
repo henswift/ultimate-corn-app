@@ -4,14 +4,12 @@ import Account from './components/AccountTab';
 import Picking from './components/PickingTab';
 import Spraying from './components/SprayingTab';
 import Planting from './components/PlantingTab';
-import Header from './components/AppHeader';
 import Footer from './components/AppFooter';
 import HomeTab from './components/HomeTab';
 
 function App() {
   return (
     <div className="Home-page">
-        <Header />
         <Routes>
           <Route path="/" element={<HomeTab/>}/>
           <Route path="/planting" element={<Planting/>}/>
