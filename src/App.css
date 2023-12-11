@@ -2,7 +2,11 @@
   text-align: center;
 }
 
-.App-header {
+.App-link {
+  color: #61dafb;
+}
+
+.Home-page {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -11,9 +15,21 @@
   justify-content: start;
   font-size: calc(10px + 2vmin);
   color: white;
-  border: solid 2px red;
 }
 
-.App-link {
-  color: #61dafb;
+.Header {
+  border: solid 2px green;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  position: sticky;
+}
+
+.Home-tab {
+  height: 2000px;
+  width: 100%;
+  display: flex;
+  border: solid 2px red;
 }

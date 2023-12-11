@@ -6,16 +6,18 @@ import Spraying from './components/SprayingTab';
 import Planting from './components/PlantingTab';
 import Header from './components/AppHeader';
 import Footer from './components/AppFooter';
+import HomeTab from './components/HomeTab';
 
 function App() {
   return (
-    <div className="App-header">
+    <div className="Home-page">
         <Header />
         <Routes>
-          <Route path="/" element={<Planting/>}/>
-          <Route path="/blogs" element={<Spraying/>}/>
-          <Route path="/blog/" element={<Picking/>}/>
-          <Route path="/users" element={<Account/>}/>
+          <Route path="/" element={<HomeTab/>}/>
+          <Route path="/planting" element={<Planting/>}/>
+          <Route path="/spraying" element={<Spraying/>}/>
+          <Route path="/picking" element={<Picking/>}/>
+          <Route path="/account" element={<Account/>}/>
         </Routes>
         <Footer />
     </div>
