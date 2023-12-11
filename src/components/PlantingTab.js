@@ -2,7 +2,9 @@ import React from 'react'
 
 function Planting() {
   return (
-    <div>planting</div>
+    <div className='Home-tab'>
+      planting
+      </div>
   )
 }
 

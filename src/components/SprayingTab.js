@@ -2,7 +2,9 @@ import React from 'react'
 
 function Spraying() {
   return (
-    <div>spraying</div>
+    <div className='Home-tab'>
+      spraying
+    </div>
   )
 }
 

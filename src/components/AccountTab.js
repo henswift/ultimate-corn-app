@@ -2,7 +2,7 @@ import React from 'react'
 
 function Account() {
   return (
-    <div>
+    <div className='Home-tab'>
       account
     </div>
   )

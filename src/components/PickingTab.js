@@ -2,7 +2,9 @@ import React from 'react'
 
 function Picking() {
   return (
-    <div>picking</div>
+    <div className='Home-tab'>
+      picking
+      </div>
   )
 }
 

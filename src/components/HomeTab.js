@@ -2,7 +2,9 @@ import React from 'react'
 
 function HomeTab() {
   return (
-    <div className='Home-tab'>HomeTab</div>
+    <div className='Home-tab'>
+        HomeTab
+        </div>
   )
 }
 

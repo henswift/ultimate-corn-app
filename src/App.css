@@ -1,9 +1,11 @@
 .App {
   text-align: center;
+  overflow: hidden;
 }
 
 .App-link {
   color: #61dafb;
+  text-decoration: none;
 }
 
 .Home-page {
@@ -18,18 +20,45 @@
 }
 
 .Header {
-  border: solid 2px green;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 70px;
   position: sticky;
+  top: 0;
+  background-color: #3d4451;
 }
 
 .Home-tab {
   height: 2000px;
   width: 100%;
   display: flex;
-  border: solid 2px red;
+  justify-content: center;
+}
+
+.H-one {
+  font-size: large;
+}
+
+.Footer {
+  width: 100%;
+  display: flex;
+  position: sticky;
+  bottom: 0;
+  background-color: #3d4451;
+}
+
+.Footer h3 {
+  margin: 0;
+  padding: 15px 25px;
+  color: white;
+  border-left: solid 1px #282c34;
+  border-left: solid 1px #282c34;
+  text-decoration: none;
+}
+
+.Footer-links {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
 }
