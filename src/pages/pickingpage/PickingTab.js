@@ -1,3 +1,4 @@
+import './PickingTab.css';
 import React from 'react'
 import Calculator from '../../pagecomponents/Pickingcalculator'
 

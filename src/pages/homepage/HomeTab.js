@@ -1,3 +1,4 @@
+import './HomeTab.css';
 import React from 'react'
 
 function HomeTab() {

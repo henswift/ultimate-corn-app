@@ -1,3 +1,4 @@
+import './PlantingTab.css';
 import React from 'react'
 
 function Planting() {

@@ -1,3 +1,4 @@
+import './AppHeader.css';
 import React from 'react'
 
 function Header() {
