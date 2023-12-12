@@ -1,14 +1,22 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 function Footer() {
   return (
     <div className='Footer'>
       <div className='Footer-links'>
-        <Link to="/"><h4>Home</h4></Link>
-        <Link to="/planting"><h4>Planting</h4></Link>
-        <Link to="/spraying"><h4>Spraying</h4></Link>
-        <Link to="/picking"><h4>Picking</h4></Link>
+        <NavLink to="/" className={({ isActive }) => isActive ? 'active' : 'inactive'}>
+          <h4>Home</h4>
+        </NavLink>
+        <NavLink to="/planting" className={({ isActive }) => isActive ? 'active' : 'inactive'}>
+          <h4>Planting</h4>
+        </NavLink>
+        <NavLink to="/spraying" className={({ isActive }) => isActive ? 'active' : 'inactive'}>
+          <h4>Spraying</h4>
+        </NavLink>
+        <NavLink to="/picking" className={({ isActive }) => isActive ? 'active' : 'inactive'}>
+          <h4>Picking</h4>
+        </NavLink>
       </div>
     </div>
   )

@@ -1,3 +1,66 @@
+/* Global Resets */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --font-family: 'Helvetica Neue', sans-serif;
+  --font-size: 16px;
+  --line-height: 1.5;
+  --letter-spacing: 0.5px;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  letter-spacing: var(--letter-spacing);
+}
+
+/* Color Pallete */
+:root {
+  --primary-color: #333;
+  --secondary-color: #666;
+  --accent-color: #999;
+}
+
+
+:root {
+  --spacing-unit: 10px;
+  --padding-scale: 0 1 2 3 4 5 6 7;
+  --margin-scale: 0 1 2 3 4 5 6 7;
+}
+
+.box {
+  padding: calc(var(--spacing-unit) * var(--padding-scale));
+  margin: calc(var(--spacing-unit) * var(--margin-scale));
+}
+
+:root {
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+}
+
+@media screen and (min-width: var(--breakpoint-sm)) {
+  /* Styles for small screens */
+}
+
+@media screen and (min-width: var(--breakpoint-md)) {
+  /* Styles for medium screens */
+}
+
+@media screen and (min-width: var(--breakpoint-lg)) {
+  /* Styles for large screens */
+}
+
+@media screen and (min-width: var(--breakpoint-xl)) {
+  /* Styles for extra-large screens */
+}
+
 .App {
   text-align: center;
 }
@@ -34,25 +97,9 @@ a {
   align-items: center;
 }
 
-.Footer h4 {
-  margin: 0;
-  padding: 10px 20px;
-  color: white;
-  justify-content: center;
-  flex-grow: 1;
-  background-color: #282c34;
-  border-radius: 10px;
-  transition: all 0.5s ease;
-}
-
-.Footer h4:hover {
-  margin: 0;
-  padding: 10px 20px;
-  color: #282c34;
-  justify-content: center;
-  flex-grow: 1;
-  background-color: white;
-  border-radius: 10px;
+.Footer .inactive h4:hover {
+  font-weight: 900;
+  background-color: #3d4451;
 }
 
 .Footer-links {
@@ -61,11 +108,29 @@ a {
   justify-content: space-between;
   width: 90%;
   border-radius: 20px;
-  background-color: #3d4451;
   margin-bottom: 20px;
   padding: 10px 10px;
   background-color: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.Footer .active h4, .Footer .inactive h4 {
+  margin: 0;
+  padding: 10px 20px;
+  justify-content: center;
+  flex-grow: 1;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+}
+
+.Footer .active h4 {
+  color: #282c34;
+  background-color: white;
+}
+
+.Footer .inactive h4 {
+  background-color: #282c34;
+  color: white;
 }
