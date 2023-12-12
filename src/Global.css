@@ -26,7 +26,6 @@ body {
   --accent-color: #999;
 }
 
-
 :root {
   --spacing-unit: 10px;
   --padding-scale: 0 1 2 3 4 5 6 7;
@@ -85,52 +84,4 @@ a {
   width: 100%;
   display: flex;
   justify-content: center;
-}
-
-.Footer {
-  width: 100%;
-  display: flex;
-  position: sticky;
-  bottom: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.Footer .inactive h4:hover {
-  font-weight: 900;
-  background-color: #3d4451;
-}
-
-.Footer-links {
-  display: flex;
-  align-items: stretch;
-  justify-content: space-between;
-  width: 90%;
-  border-radius: 20px;
-  margin-bottom: 20px;
-  padding: 10px 10px;
-  background-color: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-}
-
-.Footer .active h4, .Footer .inactive h4 {
-  margin: 0;
-  padding: 10px 20px;
-  justify-content: center;
-  flex-grow: 1;
-  border-radius: 10px;
-  transition: all 0.5s ease;
-}
-
-.Footer .active h4 {
-  color: #282c34;
-  background-color: white;
-}
-
-.Footer .inactive h4 {
-  background-color: #282c34;
-  color: white;
 }

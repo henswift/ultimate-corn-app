@@ -1,11 +1,11 @@
-import './App.css';
+import './Global.css';
 import { Routes, Route } from 'react-router-dom';
-import Account from './components/mainpages/accountpage/AccountTab'
-import Picking from './components/mainpages/pickingpage/PickingTab';
-import Spraying from './components/mainpages/sprayingpage/SprayingTab';
-import Planting from './components/mainpages/plantingpage/PlantingTab';
-import Footer from './components/AppFooter';
-import HomeTab from './components/mainpages/homepage/HomeTab';
+import Account from './pages/accountpage/AccountTab'
+import Picking from './pages/pickingpage/PickingTab';
+import Spraying from './pages/sprayingpage/SprayingTab';
+import Planting from './pages/plantingpage/PlantingTab';
+import Footer from './globalcomponants/footer/AppFooter';
+import HomeTab from './pages/homepage/HomeTab';
 
 function App() {
   return (
