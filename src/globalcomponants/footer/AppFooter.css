@@ -2,6 +2,7 @@
   width: 100%;
   display: flex;
   position: sticky;
+  bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,10 +60,10 @@
 
 @media only screen and (min-width: 601px) and (max-width: 992px) {
   .Footer-links {
-    width: 90%;
-    border-radius: 25px;
+    width: 80%;
+    border-radius: 20px;
     margin-bottom: 20px;
-    padding: 15px;
+    padding: 10px;
   }
   .Footer .active h4, .Footer .inactive h4 {
     padding: 10px 20px;
