@@ -5,7 +5,7 @@
   padding: 0;
 }
 
-:root {
+/* :root {
   --font-family: 'Helvetica Neue', sans-serif;
   --font-size: 16px;
   --line-height: 1.5;
@@ -19,18 +19,18 @@ body {
   letter-spacing: var(--letter-spacing);
 }
 
-/* Color Pallete */
+
 :root {
   --primary-color: #333;
   --secondary-color: #666;
   --accent-color: #999;
 }
-
+/* 
 :root {
   --spacing-unit: 10px;
   --padding-scale: 0 1 2 3 4 5 6 7;
   --margin-scale: 0 1 2 3 4 5 6 7;
-}
+} 
 
 .box {
   padding: calc(var(--spacing-unit) * var(--padding-scale));
@@ -45,20 +45,20 @@ body {
 }
 
 @media screen and (min-width: var(--breakpoint-sm)) {
-  /* Styles for small screens */
+
 }
 
 @media screen and (min-width: var(--breakpoint-md)) {
-  /* Styles for medium screens */
+  
 }
 
 @media screen and (min-width: var(--breakpoint-lg)) {
-  /* Styles for large screens */
+  
 }
 
 @media screen and (min-width: var(--breakpoint-xl)) {
-  /* Styles for extra-large screens */
-}
+  
+} */
 
 .App {
   text-align: center;
