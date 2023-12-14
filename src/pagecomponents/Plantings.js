@@ -1,7 +1,8 @@
-import React from 'react'
-import { useState, useEffect } from 'react'
+import React from 'react';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 
-function plantings() {
+function Plantings() {
     const [sections, setSections] = useState([]);
 
   useEffect(() => {
@@ -23,4 +24,4 @@ function plantings() {
   )
 }
 
-export default plantings
+export default Plantings
