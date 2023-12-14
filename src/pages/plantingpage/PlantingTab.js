@@ -1,27 +1,11 @@
 import './PlantingTab.css';
 import React from 'react';
-import { useEffect } from 'react';
-import { useState } from 'react';
-import axios from 'axios';
+import Plantings from '../../pagecomponents/Plantings';
 
 function Planting() {
-
-  const [plantings, setPlantings] = useState([]);
-
-  useEffect(() => {
-    
-    const fetchData = async () => {
-      const response = await axios.get('https://657a4ab21acd268f9afae0fa.mockapi.io/sections');
-      setPlantings(response.data);
-    };
-    fetchData();
-  }, []);
-
-  console.log(plantings);
-
   return (
     <div className='Home-tab'>
-      planting
+       <Plantings />
       </div>
   )
 }
