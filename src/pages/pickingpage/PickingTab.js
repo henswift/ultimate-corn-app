@@ -1,6 +1,6 @@
 import './PickingTab.css';
-import React from 'react'
-import Calculator from '../../pagecomponents/Pickingcalculator'
+import React from 'react';
+import Calculator from '../../pagecomponents/Pickingcalculator';
 
 function Picking() {
   return (

@@ -1,5 +1,5 @@
 import './HomeTab.css';
-import React from 'react'
+import React from 'react';
 
 function HomeTab() {
   return (
