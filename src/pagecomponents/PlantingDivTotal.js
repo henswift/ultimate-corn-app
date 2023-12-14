@@ -2,7 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-function Plantings() {
+function PlantingDivTotal() {
     const [sections, setSections] = useState([]);
 
   useEffect(() => {
@@ -24,4 +24,4 @@ function Plantings() {
   )
 }
 
-export default Plantings
+export default PlantingDivTotal
