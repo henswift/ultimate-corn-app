@@ -25,3 +25,6 @@ Functionality that I need:
     Glass affect for the header and footer
         backdrop-filter: saturate(180%) blur(20px);
         background-color: rgba(255,255,255,0.7);
+
+    Regular Box shadow: box-shadow: 2px 4px 12px rgba(0,0,0,.08);
+    Hover Box shadow:  box-shadow: 2px 4px 16px rgba(0,0,0,.16);

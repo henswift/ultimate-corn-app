@@ -11,7 +11,7 @@ function Planting() {
   useEffect(() => {
     
     const fetchData = async () => {
-      const response = await axios.get('https://657a4ab21acd268f9afae0fa.mockapi.io/');
+      const response = await axios.get('https://657a4ab21acd268f9afae0fa.mockapi.io/sections');
       console.log(response.data);
       setPlantings(response.data);
     };
@@ -21,7 +21,7 @@ function Planting() {
 
   return (
     <div className='Home-tab'>
-      <Planting />
+      planting
       </div>
   )
 }
