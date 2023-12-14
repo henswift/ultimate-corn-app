@@ -28,3 +28,14 @@ Functionality that I need:
 
     Regular Box shadow: box-shadow: 2px 4px 12px rgba(0,0,0,.08);
     Hover Box shadow:  box-shadow: 2px 4px 16px rgba(0,0,0,.16);
+
+
+
+    @media only screen and (max-width: 600px) {
+}
+
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+}
+
+@media only screen and (min-width: 993px) {
+}
