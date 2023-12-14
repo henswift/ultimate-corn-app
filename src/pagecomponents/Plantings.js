@@ -1,30 +1,26 @@
-import React from 'react';
-import { useEffect } from 'react';
-import { useState } from 'react';
-import axios from 'axios';
+import React from 'react'
+import { useState, useEffect } from 'react'
 
-function Plantings() {
-    
-  const [plantings, setPlantings] = useState([]);
+function plantings() {
+    const [sections, setSections] = useState([]);
 
   useEffect(() => {
-      
-      const fetchData = async () => {
-          const response = await axios.get('https://657a4ab21acd268f9afae0fa.mockapi.io/sections');
-          setPlantings(response.data);
-      };
-      fetchData();
+    const fetchData = async () => {
+      const response = await axios.get('https://657a4ab21acd268f9afae0fa.mockapi.io/sections');
+      setSections(response.data);
+    };
+    fetchData();
   }, []);
 
-  console.log(plantings);
+  console.log(sections);
 
   return (
     <div>
-        {plantings.map((planting, index) => (
-            <p key={index}>{planting.name}</p>
-        ))}
+      {sections.map((section) => (
+      <p key={section.id}>{section.name}</p>
+      ))}
     </div>
-  );
+  )
 }
 
-export default Plantings;
+export default plantings

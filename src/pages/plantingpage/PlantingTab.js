@@ -1,13 +1,12 @@
 import './PlantingTab.css';
 import React from 'react';
-import Plantings from '../../pagecomponents/Plantings';
 
-function Planting() {
+function PlantingTab() {
   return (
     <div className='Home-tab'>
-       <Plantings />
+
       </div>
   )
 }
 
-export default Planting
+export default PlantingTab
