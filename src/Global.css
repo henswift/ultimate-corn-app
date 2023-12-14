@@ -41,13 +41,6 @@ a {
   color: #1d1d1f;
 }
 
-.Home-tab {
-  height: 2000px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
 @media only screen and (max-width: 600px) {
   :root {
     --font-size: 14px;
