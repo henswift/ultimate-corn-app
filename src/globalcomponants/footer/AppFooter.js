@@ -1,4 +1,4 @@
-import './AppFooter.css';
+import './MobileHome.css';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
