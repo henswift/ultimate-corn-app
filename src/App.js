@@ -1,4 +1,5 @@
 import './Global.css';
+import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Account from './pages/accountpage/AccountTab'
 import Picking from './pages/pickingpage/PickingTab';
