@@ -5,7 +5,6 @@ import './PlantingDivTotal.css';
 
 function PlantingDivTotal() {
   const [sections, setSections] = useState([]);
-  const [plantings, setPlantings] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
