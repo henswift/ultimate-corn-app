@@ -4,7 +4,7 @@ import Calculator from '../../pagecomponents/Pickingcalculator';
 
 function Picking() {
   return (
-    <div className='Home-tab'>
+    <div className='Picking-tab'>
       picking
       <Calculator />
       </div>

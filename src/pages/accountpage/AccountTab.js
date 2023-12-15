@@ -3,7 +3,7 @@ import React from 'react';
 
 function Account() {
   return (
-    <div className='Home-tab'>
+    <div className='Account-tab'>
       account
     </div>
   )

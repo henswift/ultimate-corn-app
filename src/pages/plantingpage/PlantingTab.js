@@ -4,7 +4,7 @@ import React from 'react';
 
 function PlantingTab() {
   return (
-    <div className='Home-tab'>
+    <div className='Planting-tab'>
         <PlantingDivTotal />
       </div>
   )
