@@ -17,12 +17,6 @@ body {
   letter-spacing: var(--letter-spacing);
 }
 
-:root {
-  --primary-color: #333;
-  --secondary-color: #666;
-  --accent-color: #999;
-}
-
 .App {
   text-align: center;
 }
