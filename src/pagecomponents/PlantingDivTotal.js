@@ -5,6 +5,7 @@ import './PlantingDivTotal.css';
 
 function PlantingDivTotal() {
   const [sections, setSections] = useState([]);
+  const [plantings, setPlantings] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -23,7 +24,7 @@ function PlantingDivTotal() {
 
 
   return (
-    <div>
+    <div className='Section-container'>
       {sections.map((section) => (
         <div key={section.id} className='Section-default-box'>
           <p>{section.name}</p>

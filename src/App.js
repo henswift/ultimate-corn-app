@@ -7,10 +7,12 @@ import Spraying from './pages/sprayingpage/SprayingTab';
 import PlantingTab from './pages/plantingpage/PlantingTab';
 import Footer from './globalcomponants/footer/AppFooter';
 import HomeTab from './pages/homepage/HomeTab';
+import Header from './globalcomponants/header/AppHeader';
 
 function App() {
   return (
     <div className="Home-page">
+        <Header />
         <Routes>
           <Route path="/" element={<HomeTab/>}/>
           <Route path="/planting" element={<PlantingTab/>}/>

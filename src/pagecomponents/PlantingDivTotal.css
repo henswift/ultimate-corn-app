@@ -1,5 +1,6 @@
 .Section-default-box {
-    padding: 15px;
+    display: flex;
+    padding: 20px;
     border-radius: 15px;
     background-color: #fff;
     box-shadow: 2px 4px 12px rgba(0,0,0,.08);
@@ -8,4 +9,10 @@
 
 .Section-default-box:hover {
     box-shadow: 2px 4px 16px rgba(0,0,0,.16);
+}
+
+.Section-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
