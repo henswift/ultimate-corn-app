@@ -49,8 +49,8 @@
 
 @media only screen and (max-width: 600px) {
    .Footer-links {
-    border-radius: 15px;
-
+    border-radius: 10px;
+    padding: 5px;
    }
    .Footer .active h4, .Footer .inactive h4 {
     padding: 10px 10px;
@@ -60,12 +60,12 @@
 
 @media only screen and (min-width: 601px) and (max-width: 992px) {
   .Footer-links {
-    border-radius: 20px;
-    padding: 10px;
+    border-radius: 15px;
+    padding: 7.5px;
   }
   .Footer .active h4, .Footer .inactive h4 {
     padding: 10px 20px;
-    border-radius: 10px;
+    border-radius: 7.5px;
   }
 }
 
