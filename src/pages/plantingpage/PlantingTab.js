@@ -14,6 +14,15 @@ function PlantingTab() {
           <PlantingDivTotal />
         </div>
       </div>
+      <div className='Item-section'>
+        <div className='Section-titles'>
+          <h3>Sections</h3>
+          <h3>+ Section</h3>
+        </div>
+        <div className='Section-contents'>
+          <PlantingDivTotal />
+        </div>
+      </div>
     </div>
   )
 }

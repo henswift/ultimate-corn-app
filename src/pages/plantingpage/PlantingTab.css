@@ -1,5 +1,6 @@
 .Planting-tab {
     display: flex;
+    flex-direction: column;
     height: 100vh;
     padding: 40px;
   }
@@ -9,7 +10,10 @@
     height: fit-content;
     display: flex;
     flex-direction: column;
-    background-color: #ffffff;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 2px 4px 12px rgba(0,0,0,.08);
+    margin-bottom: 50px;
   }
 
   .Section-contents {
@@ -21,6 +25,5 @@
   .Section-titles {
     display: flex;
     justify-content: space-between;
-    padding: 10px;
-    background-color: #ffffff
+    padding: 10px 15px;
   }
