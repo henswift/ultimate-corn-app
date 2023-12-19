@@ -1,34 +1,22 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useContext } from 'react';
 import './PlantingDivTotal.css';
+import { AppContext } from '../store/AppContext';
+import { Link } from 'react-router-dom';
 
 function PlantingDivTotal() {
-  const [sections, setSections] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get('https://657a4ab21acd268f9afae0fa.mockapi.io/sections/');
-        setSections(response.data);
-      } catch (err){
-        console.error("Error fetching data:", err.message);
-      }
-
-    };
-    fetchData();
-  }, []);
-
-  console.log(sections);
-
+  
+  const {app} = useContext(AppContext);
+  const {sections} = app;
 
   return (
     <div className='Section-container'>
       {sections.map((section) => (
-        <div key={section.id} className='Section-default-box'>
-          <p>{section.name}</p>
-          <p>{section.id}</p>
-        </div>
+        <Link to={`/section/${section.id}`} key={section.id}>
+          <div className='Section-default-box'>
+            <p>{section.name}</p>
+            <p>{section.id}</p>
+          </div>
+        </Link>
       ))}
     </div>
   )
