@@ -1,0 +1,21 @@
+.Section-default-box {
+    display: flex;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 2px 4px 12px rgba(0,0,0,.08);
+    margin: 20px;
+}
+
+.Section-default-box:hover {
+    box-shadow: 2px 4px 16px rgba(0,0,0,.16);
+}
+
+.Section-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}

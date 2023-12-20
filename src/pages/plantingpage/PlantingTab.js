@@ -1,4 +1,5 @@
 import PlantingDivTotal from '../../pagecomponents/PlantingDivTotal';
+import SectionDivTotal from '../../pagecomponents/SectionDivTotal';
 import './PlantingTab.css';
 import React from 'react';
 
@@ -11,7 +12,7 @@ function PlantingTab() {
           <h3>+ Section</h3>
         </div>
         <div className='Section-contents'>
-          <PlantingDivTotal />
+          <SectionDivTotal />
         </div>
       </div>
       <div className='Item-section'>

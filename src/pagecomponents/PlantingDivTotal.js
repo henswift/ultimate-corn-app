@@ -1,3 +1,5 @@
+// This section returns a div with all the plantings in them. 
+
 import React, { useContext } from 'react';
 import './PlantingDivTotal.css';
 import { AppContext } from '../store/AppContext';

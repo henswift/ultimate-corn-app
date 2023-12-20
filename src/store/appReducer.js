@@ -5,6 +5,9 @@ const appReducer = (state,action) => {
         case 'loadSections':
             newState.sections = payload;
             break;
+        case 'loadPlantings':
+            newState.plantings = payload;
+            break;
         case 'addSection':
             newState.sections.push(payload)
             break;
