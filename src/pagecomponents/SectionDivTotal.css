@@ -1,10 +1,24 @@
 .Section-default-box {
     display: flex;
-    padding: 20px;
+    flex-direction: column;
     border-radius: 15px;
     background-color: #fff;
     box-shadow: 2px 4px 12px rgba(0,0,0,.08);
-    margin: 20px;
+    align-items: center;
+    width: 120px;
+    height: 150px;
+    overflow: hidden;
+    padding: 0px;
+}
+
+.Section-default-box p {
+    padding: 5px 10px;
+}
+
+.Section-default-box img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
 
 .Section-default-box:hover {

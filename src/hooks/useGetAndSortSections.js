@@ -7,7 +7,6 @@ function useGetAndSortSections(setApp) {
       try {
         const response = await axios.get('https://657a4ab21acd268f9afae0fa.mockapi.io/sections/');
         const sections = response.data;
-        console.log(sections)
 
         let allPlantings = [];
 
@@ -15,7 +14,6 @@ function useGetAndSortSections(setApp) {
           allPlantings = allPlantings.concat(section.plantings);
         });
         
-        console.log(allPlantings)
         setApp({ type: 'loadPlantings', payload: allPlantings });
         setApp({ type: 'loadSections', payload: sections });
       } catch (err) {

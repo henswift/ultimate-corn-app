@@ -1,7 +1,28 @@
 .Spraying-tab {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 30px;
-  }
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+}
+
+.Item-section {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 2px 4px 12px rgba(0,0,0,.08);
+  margin-bottom: 50px;
+}
+
+.Section-contents {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Section-titles {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+}

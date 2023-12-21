@@ -8,11 +8,11 @@ function PlantingTab() {
     <div className='Planting-tab'>
       <div className='Item-section'>
         <div className='Section-titles'>
-          <h3>Sections</h3>
-          <h3>+ Section</h3>
+          <h3>Plantings</h3>
+          <h3>+ Plantings</h3>
         </div>
         <div className='Section-contents'>
-          <SectionDivTotal />
+          <PlantingDivTotal />
         </div>
       </div>
       <div className='Item-section'>
@@ -21,7 +21,7 @@ function PlantingTab() {
           <h3>+ Section</h3>
         </div>
         <div className='Section-contents'>
-          <PlantingDivTotal />
+          <SectionDivTotal />
         </div>
       </div>
     </div>
