@@ -1,7 +1,7 @@
-// This page returns a section with all the field sections in them. 
+// Returns all the sections in a div.
 
 import React, { useContext } from 'react';
-import './PlantingDivTotal.css';
+import './SectionDivTotal.css';
 import { AppContext } from '../store/AppContext';
 import { Link } from 'react-router-dom';
 
@@ -16,7 +16,7 @@ function SectionDivTotal() {
       <Link to={`/section/${section.id}`} key={section.id}>
         <div className='Section-default-box'>
           <p>{section.name}</p>
-          <p>{section.id}</p>
+          <img src={section.image} alt='section' />
         </div>
       </Link>
     ))}

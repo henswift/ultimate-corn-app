@@ -17,7 +17,6 @@ function App() {
   let [app, setApp] = useReducer(appReducer, initAppObject);
   useGetAndSortSections(setApp);
 
-
   return (
     <AppContext.Provider value={{app, setApp}}>      
       <div className="Home-page">

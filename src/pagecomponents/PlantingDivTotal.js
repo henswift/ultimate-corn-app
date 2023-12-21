@@ -1,4 +1,4 @@
-// This section returns a div with all the plantings in them. 
+// Returns all the plantings into a div. 
 
 import React, { useContext } from 'react';
 import './PlantingDivTotal.css';
@@ -7,16 +7,16 @@ import { Link } from 'react-router-dom';
 
 function PlantingDivTotal() {
   
-  const {app} = useContext(AppContext);
-  const {sections} = app;
+  const { app } = useContext(AppContext);
+  const { plantings } = app;
 
   return (
     <div className='Section-container'>
-      {sections.map((section) => (
-        <Link to={`/section/${section.id}`} key={section.id}>
+      {plantings.map((planting) => (
+        <Link to={`/plantings/${planting.id}`} key={planting.id}>
           <div className='Section-default-box'>
-            <p>{section.name}</p>
-            <p>{section.id}</p>
+            <p>{planting.name}</p>  
+            <img src={planting.image} alt='corn' />
           </div>
         </Link>
       ))}
@@ -24,4 +24,4 @@ function PlantingDivTotal() {
   )
 }
 
-export default PlantingDivTotal
+export default PlantingDivTotal;
