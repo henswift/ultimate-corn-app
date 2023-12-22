@@ -1,7 +1,7 @@
 .Planting-tab {
     display: flex;
     flex-direction: column;
-    padding: 40px;
+    padding: 0px 30px;
   }
 
   .Item-section {

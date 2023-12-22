@@ -5,6 +5,8 @@ import Account from './pages/accountpage/AccountTab'
 import Picking from './pages/pickingpage/PickingTab';
 import Spraying from './pages/sprayingpage/SprayingTab';
 import PlantingTab from './pages/plantingpage/PlantingTab';
+import AddPlantings from './pagecomponents/AddPlantings';
+import AddSections from './pagecomponents/AddSections';
 import Footer from './globalcomponants/footer/AppFooter';
 import HomeTab from './pages/homepage/HomeTab';
 import Header from './globalcomponants/header/AppHeader';
@@ -24,6 +26,8 @@ function App() {
           <Routes>
             <Route path="/" element={<HomeTab/>}/>
             <Route path="/planting" element={<PlantingTab/>}/>
+            <Route path="/add-planting" element={<AddPlantings/>}/>
+            <Route path="/add-section" element={<AddSections/>}/>
             <Route path="/spraying" element={<Spraying/>}/>
             <Route path="/picking" element={<Picking/>}/>
             <Route path="/account" element={<Account/>}/>
