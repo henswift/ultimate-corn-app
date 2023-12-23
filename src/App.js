@@ -15,6 +15,7 @@ import appReducer from './store/appReducer';
 import { AppContext, initAppObject } from './store/AppContext';
 import ViewPlanting from './pagecomponents/ViewPlanting';
 import ViewSection from './pagecomponents/ViewSection';
+import ScrollToTop from './pagecomponents/ScrollToTop';
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
   return (
     <AppContext.Provider value={{app, setApp}}>      
       <div className="Home-page">
+          <ScrollToTop />
           <Header />
           <Routes>
             <Route path="/" element={<HomeTab/>}/>
