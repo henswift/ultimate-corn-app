@@ -2,13 +2,14 @@ import './Appheader.css';
 import React from 'react';
 import { useNavigate } from "react-router-dom";
 
-const navigate = useNavigate();
-
-const handleBackButtonClick = () => {
-  navigate(-1);
-};
-
 function Header() {
+  
+    const navigate = useNavigate();
+
+    const handleBackButtonClick = () => {
+      navigate(-1);
+    };
+
   return (
     <div className='Header'>
       <div className='Header-logo'>
