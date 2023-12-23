@@ -1,5 +1,5 @@
 import React from 'react'
-import './AddPlanting.css';
+import './AddPlantings.css';
 
 function AddPlantings() {
   return (

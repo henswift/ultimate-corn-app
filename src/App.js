@@ -13,6 +13,8 @@ import Header from './globalcomponants/header/AppHeader';
 import useGetAndSortSections from './hooks/useGetAndSortSections';
 import appReducer from './store/appReducer';
 import { AppContext, initAppObject } from './store/AppContext';
+import ViewPlanting from './pagecomponents/ViewPlanting';
+import ViewSection from './pagecomponents/ViewSection';
 
 function App() {
 
@@ -28,6 +30,8 @@ function App() {
             <Route path="/planting" element={<PlantingTab/>}/>
             <Route path="/add-planting" element={<AddPlantings/>}/>
             <Route path="/add-section" element={<AddSections/>}/>
+            <Route path="/planting/:id" element={<ViewPlanting/>}/>
+            <Route path="/section/:id" element={<ViewSection/>}/>
             <Route path="/spraying" element={<Spraying/>}/>
             <Route path="/picking" element={<Picking/>}/>
             <Route path="/account" element={<Account/>}/>

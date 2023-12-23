@@ -7,7 +7,6 @@ function useGetAndSortSections(setApp) {
       try {
         const response = await axios.get('https://657a4ab21acd268f9afae0fa.mockapi.io/sections/');
         const sections = response.data;
-        console.log(response)
 
         let allPlantings = [];
 
