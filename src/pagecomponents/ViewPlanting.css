@@ -1,0 +1,33 @@
+.singlePlantingMain {
+    min-height: 85vh;
+    display: flex;
+    padding: 30px;
+    flex-direction: column;
+}
+
+.singlePlantingMain h2 {
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+}
+.singlePlantingMain h3 {
+    display: flex;
+    padding: 30px 10px 10px 10px;
+}
+
+.singlePlantingMain p {
+    display: flex;
+    padding: 10px;
+}
+
+.singlePlantingText {
+    display: flex;
+    flex-direction: column;
+}
+
+.singlePlantingImage {
+    display: flex;
+    padding: 30px;
+    justify-content: center;
+}
+

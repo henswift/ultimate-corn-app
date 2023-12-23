@@ -1,7 +1,9 @@
 .Planting-tab {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     padding: 0px 30px;
+    flex: 1;
   }
 
   .Item-section {

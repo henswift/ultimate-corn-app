@@ -1,0 +1,18 @@
+.singleSectionMain {
+    min-height: 85vh;
+    display: flex;
+    padding: 30px;
+    flex-direction: column;
+}
+
+.singleSectionText {
+    display: flex;
+    flex-direction: column;
+}
+
+.singleSectionImage {
+    display: flex;
+    padding: 30px;
+    justify-content: center;
+}
+
