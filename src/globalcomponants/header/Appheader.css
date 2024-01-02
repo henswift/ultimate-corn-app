@@ -14,8 +14,11 @@
     box-shadow: 2px 4px 16px rgba(0,0,0,.16);
 }
 
-.Header-logo h4 {
+.Header-logo button {
     padding: 1px 10px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
 }
 
 

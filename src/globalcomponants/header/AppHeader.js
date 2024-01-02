@@ -3,7 +3,7 @@ import React from 'react';
 import { useNavigate } from "react-router-dom";
 
 function Header() {
-  
+
     const navigate = useNavigate();
 
     const handleBackButtonClick = () => {
@@ -13,7 +13,7 @@ function Header() {
   return (
     <div className='Header'>
       <div className='Header-logo'>
-        <h4 onClick={handleBackButtonClick}> Back</h4>
+        <button onClick={handleBackButtonClick}>Back</button>
         <h3 className='H-one'>Ultimate Corn App</h3>
         <h4> Built by Hen</h4>
       </div>
