@@ -19,8 +19,9 @@
     cursor: pointer;
     border: none;
     background-color: transparent;
+    font-size: medium;
+    font-weight: 700;
 }
-
 
 
 @media only screen and (max-width: 600px) {

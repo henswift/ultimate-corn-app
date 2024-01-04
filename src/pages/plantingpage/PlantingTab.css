@@ -28,3 +28,12 @@
     justify-content: space-between;
     padding: 10px 15px;
   }
+
+  .Section-titles button {
+    padding: 1px 10px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    font-size: medium;
+    font-weight: 700;
+  }

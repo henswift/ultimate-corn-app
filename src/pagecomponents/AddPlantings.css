@@ -1,0 +1,42 @@
+.entireaddplantingspage {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 30px;
+    flex: 1;
+}   
+
+.addPlantings {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 2px 4px 12px rgba(0,0,0,.08);
+    margin-bottom: 50px;
+}
+
+.inputfield {
+    padding: 30px;
+}
+
+label {
+    padding: 2em;
+    font-style: italic;
+}
+
+.footerelements {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+}
+
+.footerelements button {
+    padding: 1px 10px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    font-size: medium;
+    font-weight: 700;
+}
