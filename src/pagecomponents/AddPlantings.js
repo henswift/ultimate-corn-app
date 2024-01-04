@@ -15,20 +15,25 @@ function AddPlantings() {
 
 
   const [dispatch] = useReducer(appReducer, initAppObject);
-  const [name, setName] = useState('');
-  const [datePlanted, setDatePlanted] = useState('');
-  const [section, setSection] = useState('usa');
-  const [photo, setPhoto] = useState(null); 
-  const [notes, setNotes] = useState('');
+
+  const [formData, setFormData] = useState({
+    name: '',
+    datePlanted: '',
+    section: '',
+    photo: null,
+    notes: '',
+  })
 
 
   const handleAddPlanting = () => {
     const newPlanting = {
-      content: taskContent,
+      // content: taskContent,
       // Add other properties of the planting object as needed
     };
     dispatch({ type: 'addPlanting', payload: newPlanting });
   };   
+
+  console.log(formData)
 
   return (
     <div className='entireaddplantingspage'>
@@ -40,8 +45,8 @@ function AddPlantings() {
               id='name'
               name='name'
               type='text'
-              value={taskContent}
-              onChange={(e) => setName(e.target.value)}
+              value={formData.name}
+              onChange={(e) => setFormData({ ...formData, name: e.target.value})}
             />
           </div>
           <div className='inputfield'>
@@ -50,13 +55,18 @@ function AddPlantings() {
               id='dateplanted'
               type="date"
               name='Date Planted'
-              value={taskContent}
-              onChange={(e) => setDatePlanted(e.target.value)}
+              value={formData.datePlanted}
+              onChange={(e) => setFormData({ ...formData, datePlanted: e.target.value})}
             />
           </div>
           <div className='inputfield'>
             <label for="sectionselect">Select a section</label>
-            <select name="country" id='sectionselect'>
+            <select
+             name="country" 
+             id='sectionselect'
+             value={formData.section}
+             onChange={(e) => setFormData({ ...formData, section: e.target.value})}
+             >
               <option value="usa">USA</option>
               <option value="canada">Canada</option>
               <option value="uk">UK</option>
@@ -68,6 +78,8 @@ function AddPlantings() {
               id='photoupload'
               type="file" 
               name="photo" 
+              value={formData.photo}
+              onChange={(e) => setFormData({ ...formData, photo: e.target.ariaValueMin})}
             />
           </div>
           <div className='inputfield'>
@@ -75,8 +87,8 @@ function AddPlantings() {
             <textarea
               id='notes'
               name='Notes'
-              value={taskContent}
-              onChange={(e) => setNotes(e.target.value)}
+              value={formData.notes}
+              onChange={(e) => setFormData({ ...formData, notes: e.target.value})}
             />
           </div>
           <div className='footerelements'>
