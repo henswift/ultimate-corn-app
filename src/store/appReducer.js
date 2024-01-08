@@ -11,6 +11,9 @@ export const appReducer = (state, action) => {
         case 'addSection':
             newState.sections.push(payload)
             break;
+        case 'addPlanting':
+            newState.plantings.push(payload)
+            break;
         default:
             console.warn(`No action type found for ${type}`);
     }

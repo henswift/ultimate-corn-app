@@ -9,6 +9,8 @@ function PlantingDivTotal() {
   const { plantings } = app;
   const [selectedPlanting, setSelectedPlanting] = useState(null);
 
+
+
   return (
     <div className='Section-container'>
       {plantings.map((planting) => (

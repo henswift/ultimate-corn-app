@@ -1,99 +1,99 @@
-import React, { useState, useReducer } from 'react';
-import { appReducer } from '../store/appReducer.js';
-import { initAppObject } from '../store/AppContext.js';
+import React, { useState } from 'react';
+import axios from 'axios';
 import './AddPlantings.css';
-import { useNavigate } from "react-router-dom";
 
 function AddPlantings() {
-
-  // Back Button logic
-  const navigate = useNavigate();
-
-  const handleBackButtonClick = () => {
-    navigate(-1);
-  };
-
-
-  const [dispatch] = useReducer(appReducer, initAppObject);
-
   const [formData, setFormData] = useState({
     name: '',
     datePlanted: '',
     section: '',
-    photo: null,
     notes: '',
-  })
+  });
 
+  const handleInputChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
 
-  const handleAddPlanting = () => {
-    const newPlanting = {
-      // content: taskContent,
-      // Add other properties of the planting object as needed
-    };
-    dispatch({ type: 'addPlanting', payload: newPlanting });
-  };   
+  const handleAddPlanting = async () => {
+    try {
+      const response = await axios.post('https://657a4ab21acd268f9afae0fa.mockapi.io/sections/3/plantings/', formData);
 
-  console.log(formData)
+      setFormData({
+        name: '',
+        datePlanted: '',
+        section: '',
+        notes: '',
+      });
+    } catch (error) {
+      console.error('Error adding plantings:', error.message);
+    }
+  };
+
+console.log(formData);
 
   return (
     <div className='entireaddplantingspage'>
       <div className="addPlantings">
         <form>
           <div className='inputfield'>
-            <label for="name">Name</label>
+            <label htmlFor="name">Name</label>
             <input
               id='name'
               name='name'
               type='text'
               value={formData.name}
-              onChange={(e) => setFormData({ ...formData, name: e.target.value})}
+              onChange={handleInputChange}
             />
           </div>
           <div className='inputfield'>
-            <label for="dateplanted">Date Planted</label>
+            <label htmlFor="dateplanted">Date Planted</label>
             <input
               id='dateplanted'
               type="date"
-              name='Date Planted'
+              name='datePlanted'
               value={formData.datePlanted}
-              onChange={(e) => setFormData({ ...formData, datePlanted: e.target.value})}
+              onChange={handleInputChange}
             />
           </div>
           <div className='inputfield'>
-            <label for="sectionselect">Select a section</label>
+            <label htmlFor="sectionselect">Select a section</label>
             <select
-             name="country" 
-             id='sectionselect'
-             value={formData.section}
-             onChange={(e) => setFormData({ ...formData, section: e.target.value})}
-             >
-              <option value="usa">USA</option>
-              <option value="canada">Canada</option>
-              <option value="uk">UK</option>
+              name="section"
+              id='sectionselect'
+              value={formData.section}
+              onChange={handleInputChange}
+            >
+              <option value="1">USA</option>
+              <option value="2">Canada</option>
+              <option value="3">UK</option>
             </select>
           </div>
-          <div className='inputfield'>
-            <label for="photoupload">Upload a Photo</label>
-            <input 
+          {/* Photo upload field */}
+          {/* <div className='inputfield'>
+            <label htmlFor="photoupload">Upload a Photo</label>
+            <input
               id='photoupload'
-              type="file" 
-              name="photo" 
+              type="file"
+              name="photo"
               value={formData.photo}
-              onChange={(e) => setFormData({ ...formData, photo: e.target.ariaValueMin})}
+              onChange={(e) => setFormData({ ...formData, photo: e.target.files[0] })}
             />
-          </div>
+          </div> */}
           <div className='inputfield'>
-            <label for="notes">Notes</label>
+            <label htmlFor="notes">Notes</label>
             <textarea
               id='notes'
-              name='Notes'
+              name='notes'
               value={formData.notes}
-              onChange={(e) => setFormData({ ...formData, notes: e.target.value})}
+              onChange={handleInputChange}
             />
           </div>
           <div className='footerelements'>
-            <button onClick={handleBackButtonClick}>Cancel</button>
-            <button type="button" onClick={() => handleAddPlanting()}>Save</button>
+            <button>Cancel</button>
+            <button type="button" onClick={handleAddPlanting}>Save</button>
           </div>
         </form>
       </div>
