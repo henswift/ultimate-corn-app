@@ -1,8 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useContext} from 'react';
 import axios from 'axios';
+import { AppContext } from '../store/AppContext';
+import { useNavigate } from 'react-router-dom';
 import './AddPlantings.css';
 
 function AddPlantings() {
+  const { setApp } = useContext(AppContext);
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
     datePlanted: '',
@@ -19,14 +23,9 @@ function AddPlantings() {
 
   const handleAddPlanting = async () => {
     try {
-      const response = await axios.post('https://657a4ab21acd268f9afae0fa.mockapi.io/sections/3/plantings/', formData);
-
-      setFormData({
-        name: '',
-        datePlanted: '',
-        section: '',
-        notes: '',
-      });
+      await axios.post('https://657a4ab21acd268f9afae0fa.mockapi.io/sections/1/plantings/', formData);
+      setApp({ type: 'addPlanting', payload: formData });
+      navigate('/planting')
     } catch (error) {
       console.error('Error adding plantings:', error.message);
     }
@@ -71,17 +70,6 @@ console.log(formData);
               <option value="3">UK</option>
             </select>
           </div>
-          {/* Photo upload field */}
-          {/* <div className='inputfield'>
-            <label htmlFor="photoupload">Upload a Photo</label>
-            <input
-              id='photoupload'
-              type="file"
-              name="photo"
-              value={formData.photo}
-              onChange={(e) => setFormData({ ...formData, photo: e.target.files[0] })}
-            />
-          </div> */}
           <div className='inputfield'>
             <label htmlFor="notes">Notes</label>
             <textarea

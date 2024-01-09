@@ -1,8 +1,12 @@
 .singleSectionMain {
-    min-height: 100vh;
+    width: 100%;
+    height: fit-content;
     display: flex;
-    padding: 30px;
     flex-direction: column;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 2px 4px 12px rgba(0,0,0,.08);
+    margin-bottom: 50px;
 }
 
 .singleSectionText {
@@ -16,3 +20,44 @@
     justify-content: center;
 }
 
+.plantingList {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 2px 4px 12px rgba(0,0,0,.08);
+    margin-bottom: 50px;
+}
+
+
+
+
+
+.sectionDefaultBox {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 2px 4px 12px rgba(0,0,0,.08);
+    align-items: center;
+    width: 120px;
+    height: 150px;
+    overflow: hidden;
+    padding: 0px;
+}
+
+.sectionDefaultBox p {
+    padding: 5px 10px;
+}
+
+.sectionDefaultBox img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.sectionDefaultBox:hover {
+    box-shadow: 2px 4px 16px rgba(0,0,0,.16);
+}

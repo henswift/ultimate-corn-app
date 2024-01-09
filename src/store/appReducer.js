@@ -14,6 +14,12 @@ export const appReducer = (state, action) => {
         case 'addPlanting':
             newState.plantings.push(payload)
             break;
+        case 'deletePlanting':
+            newState.plantings = newState.plantings.filter(p => p.id !== payload);
+            break;
+        case 'deleteSection':
+            newState.sections = newState.sections.filter(s => s.id !== payload);
+            break;
         default:
             console.warn(`No action type found for ${type}`);
     }

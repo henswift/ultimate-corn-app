@@ -1,5 +1,31 @@
 The Ultimate Corn App
 
+
+
+Questoins: 
+
+ - What is the best method for adding another planting or section?
+    - Send it to the state and do it from there?
+    - Send it to the api directly from the form?
+
+- Why doesn't it fill in the picture and content when I add another planting?
+    - I could just force a reload. 
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Functionality that I need:
     Plantings
         What kind
