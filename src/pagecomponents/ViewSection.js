@@ -10,6 +10,9 @@ function ViewSection() {
     const section = app.sections.find(p => p.id === id);
     const navigate = useNavigate();
     const [error, setError] = useState(null);
+    const handleAddPlanting = () => {
+        navigate('/add-planting')
+      }
 
     const handleDeleteSection = async (sectionID) => {
         try {
@@ -29,28 +32,41 @@ function ViewSection() {
         }
     };
 
+    if (!section) {
+        // Handle the case where the section is not found
+        return <div>Section not found</div>;
+    }
+
     return (
         <div className='singleSectionMain'>
-            {error && <div className="error">{error}</div>}
-            <div className='singleSectionText'>
-                <h2>{section.name}</h2>
-            </div>
-            <div className='singleSectionImage'>
-                <img src={section.image} alt={section.name || "Section Image"} />
-            </div>
-            <div>
-                <button onClick={() => handleDeleteSection(section.id)}>Delete</button>
-            </div>
-            <div className='plantingsList'>
-                <h3>Plantings in this section:</h3>
-                {app.plantings.filter(planting => planting.sectionId === section.id).map(planting => (
-                    <Link to={`/planting/${planting.id}`} key={planting.id}>
-                        <div key={planting.id} className='sectionDefaultBox'>
-                            <h4>{planting.name}</h4>
-                            <img src={planting.image} alt={planting.name || "Planting Image"} />
-                        </div>
-                    </Link>
-                ))}
+            <div className='sectionSpecifics'>
+                {error && <div className="error">{error}</div>}
+                <div className='singleSectionText'>
+                    <h2>{section.name}</h2>
+                </div>
+                <div className='singleSectionImage'>
+                    <img src={section.image} alt={section.name || "Section Image"} />
+                </div>
+                <div className='sectionFooter'>
+                    <button onClick={() => handleDeleteSection(section.id)}>Delete</button>
+                    <button>Edit</button>
+                </div>
+                <div className='plantingsList'>
+                    <div className='plantingListHeader'>
+                        <h3>Plantings in this section:</h3>
+                        <button onClick={handleAddPlanting}>+ Planting</button>
+                    </div>
+                    <div className='plantingListContent'>
+                        {app.plantings.filter(planting => planting.sectionId === section.id).map(planting => (
+                            <Link to={`/planting/${planting.id}`} key={planting.id}>
+                                <div key={planting.id} className='sectionDefaultBox'>
+                                    <h4>{planting.name}</h4>
+                                    <img src={planting.image} alt={planting.name || "Planting Image"} />
+                                </div>
+                            </Link>
+                        ))}
+                    </div>
+                </div>
             </div>
         </div>
     );

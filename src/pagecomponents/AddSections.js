@@ -1,5 +1,6 @@
 import React, { useState, useContext } from 'react'
 import axios from 'axios'
+import { v4 as uuidv4 } from 'uuid';
 import { useNavigate } from 'react-router-dom';
 import { AppContext } from '../store/AppContext';
 import './AddSections.css';
@@ -19,8 +20,17 @@ function AddSections() {
     });
   };
 
+  const handleCancelButtonClick = () => {
+    navigate(-1);
+  }
+
   const handleAddSection = async () => {
     try {
+      const sectionId = uuidv4();
+      setFormData({
+        ...formData,
+        id: sectionId,
+      });
       await axios.post('https://657a4ab21acd268f9afae0fa.mockapi.io/sections/', formData);
       setApp({ type: 'addSection', payload: formData });
       navigate('/planting');
@@ -43,18 +53,8 @@ function AddSections() {
               onChange={handleInputChange}
             />
           </div>
-          <div className='inputfield'>
-            <label htmlFor="sectionselect">ID</label>
-            <input
-              id='id'
-              name='id'
-              type='text'
-              value={formData.id}
-              onChange={handleInputChange}
-            />
-          </div>
           <div className='footerelements'>
-            <button>Cancel</button>
+            <button type='button' onClick={handleCancelButtonClick}>Cancel</button>
             <button type="button" onClick={handleAddSection}>Save</button>
           </div>
         </form>
