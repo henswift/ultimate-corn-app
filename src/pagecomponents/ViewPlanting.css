@@ -1,33 +1,62 @@
 .singlePlantingMain {
-    min-height: 100vh;
-    display: flex;
-    padding: 30px;
-    flex-direction: column;
+  min-height: 100vh;
+  display: flex;
+  padding: 30px;
+  flex-direction: column;
 }
 
 .singlePlantingMain h2 {
-    display: flex;
-    padding: 10px;
-    justify-content: center;
+  display: flex;
+  padding: 10px;
+  justify-content: center;
 }
+
 .singlePlantingMain h3 {
-    display: flex;
-    padding: 30px 10px 10px 10px;
+  display: flex;
+  padding: 30px 10px 10px 10px;
 }
 
 .singlePlantingMain p {
-    display: flex;
-    padding: 10px;
+  display: flex;
+  padding: 10px;
 }
 
 .singlePlantingText {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .singlePlantingImage {
-    display: flex;
-    padding: 30px;
-    justify-content: center;
+  display: flex;
+  padding: 30px;
+  justify-content: center;
+}
+
+.singlePlantingSection {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 30px;
+  box-shadow: 2px 4px 12px rgba(0,0,0,.08);
+  margin-bottom: 50px;
+  padding: 15px;
+}
+
+.singlePlantingFooter {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 15px;
+}
+
+.singlePlantingFooter button {
+  padding: 1px 10px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  font-size: medium;
+  font-weight: 700;
 }
 

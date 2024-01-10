@@ -1,14 +1,13 @@
-import './PickingTab.css';
 import React from 'react';
 import Calculator from '../../pagecomponents/Pickingcalculator';
+import './PickingTab.css';
 
 function Picking() {
   return (
-    <div className='Picking-tab'>
-      picking
+    <div className='pickingTab'>
       <Calculator />
-      </div>
-  )
-}
+    </div>
+  );
+};
 
 export default Picking

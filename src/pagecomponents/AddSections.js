@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react'
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios'
 import { v4 as uuidv4 } from 'uuid';
-import { useNavigate } from 'react-router-dom';
 import { AppContext } from '../store/AppContext';
 import './AddSections.css';
 
@@ -11,7 +11,7 @@ function AddSections() {
   const [formData, setFormData] = useState({
     name: '',
     id: '',
-  })
+  });
 
   const handleInputChange = (e) => {
     setFormData({
@@ -22,7 +22,7 @@ function AddSections() {
 
   const handleCancelButtonClick = () => {
     navigate(-1);
-  }
+  };
 
   const handleAddSection = async () => {
     try {
@@ -36,14 +36,14 @@ function AddSections() {
       navigate('/planting');
     } catch (error) {
       console.error('Error adding plantings:', error.message);
-    }
+    };
   };
 
   return (
-    <div className='entireaddplantingspage'>
-      <div className="addPlantings">
+    <div className='entireAddSectionsPage'>
+      <div className="addSections">
         <form>
-          <div className='inputfield'>
+          <div className='inputField'>
             <label htmlFor="name">Name</label>
             <input
               id='name'
@@ -53,14 +53,14 @@ function AddSections() {
               onChange={handleInputChange}
             />
           </div>
-          <div className='footerelements'>
+          <div className='sectionFooterElements'>
             <button type='button' onClick={handleCancelButtonClick}>Cancel</button>
             <button type="button" onClick={handleAddSection}>Save</button>
           </div>
         </form>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default AddSections

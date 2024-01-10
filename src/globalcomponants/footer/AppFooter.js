@@ -1,11 +1,11 @@
-import './AppFooter.css';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import './AppFooter.css';
 
 function Footer() {
   return (
-    <div className='Footer'>
-      <div className='Footer-links'>
+    <div className='footer'>
+      <div className='footerLinks'>
         <NavLink to="/" className={({ isActive }) => isActive ? 'active' : 'inactive'}>
           <h4>Home</h4>
         </NavLink>
@@ -21,6 +21,6 @@ function Footer() {
       </div>
     </div>
   )
-}
+};
 
 export default Footer

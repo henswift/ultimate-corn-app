@@ -1,44 +1,42 @@
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import PlantingDivTotal from '../../pagecomponents/PlantingDivTotal';
 import SectionDivTotal from '../../pagecomponents/SectionDivTotal';
 import './PlantingTab.css';
-import { useNavigate } from 'react-router-dom';
-import React from 'react';
-
 
 function PlantingTab() {
-
   const navigate = useNavigate();
 
   const handleAddPlanting = () => {
     navigate('/add-planting')
-  }
+  };
 
   const handleAddSection = () => {
     navigate('/add-section')
-  }
+  };
   
   return (
-    <div className='Planting-tab'>
-       <div className='Item-section'>
-        <div className='Section-titles'>
+    <div className='plantingTab'>
+       <div className='itemSection'>
+        <div className='sectionTitles'>
           <h3>Sections</h3>
           <button onClick={handleAddSection}>+ Section</button>
         </div>
-        <div className='Section-contents'>
+        <div className='sectionContents'>
           <SectionDivTotal />
         </div>
       </div>
-      <div className='Item-section'>
-        <div className='Section-titles'>
+      <div className='itemSection'>
+        <div className='sectionTitles'>
           <h3>Plantings</h3>
           <button onClick={handleAddPlanting}>+ Planting</button>
         </div>
-        <div className='Section-contents'>
+        <div className='sectionContents'>
           <PlantingDivTotal />
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default PlantingTab

@@ -1,32 +1,32 @@
-import './Global.css';
 import React, { useReducer } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import { AppContext, initAppObject } from './store/AppContext';
+import appReducer from './store/appReducer';
+import Header from './globalcomponants/header/AppHeader';
+import Footer from './globalcomponants/footer/AppFooter';
+import HomeTab from './pages/homepage/HomeTab';
 import Account from './pages/accountpage/AccountTab'
-import Picking from './pages/pickingpage/PickingTab';
 import Spraying from './pages/sprayingpage/SprayingTab';
+import Picking from './pages/pickingpage/PickingTab';
 import PlantingTab from './pages/plantingpage/PlantingTab';
 import AddPlantings from './pagecomponents/AddPlantings';
 import AddSections from './pagecomponents/AddSections';
-import Footer from './globalcomponants/footer/AppFooter';
-import HomeTab from './pages/homepage/HomeTab';
-import Header from './globalcomponants/header/AppHeader';
 import useGetAndSortSections from './hooks/useGetAndSortSections';
-import appReducer from './store/appReducer';
-import { AppContext, initAppObject } from './store/AppContext';
 import ViewPlanting from './pagecomponents/ViewPlanting';
 import ViewSection from './pagecomponents/ViewSection';
 import ScrollToTop from './pagecomponents/ScrollToTop';
+import './Global.css';
 
 function App() {
-
   let [app, setApp] = useReducer(appReducer, initAppObject);
+
   useGetAndSortSections(setApp);
 
   return (
     <AppContext.Provider value={{app, setApp}}>      
-      <div className="Home-page">
-          <ScrollToTop />
-          <Header />
+      <div className="homePage">
+          <ScrollToTop/>
+          <Header/>
           <Routes>
             <Route path="/" element={<HomeTab/>}/>
             <Route path="/planting" element={<PlantingTab/>}/>
@@ -38,10 +38,12 @@ function App() {
             <Route path="/picking" element={<Picking/>}/>
             <Route path="/account" element={<Account/>}/>
           </Routes>
-          <Footer />
+          <Footer/>
       </div>
+      {app.plantingToEdit ? <div> Editing... {app.plantingToEdit.name}</div> : null}
+      {app.plantingToEdit && <div>Editing Again...</div>}
     </AppContext.Provider>
   );
-}
+};
 
 export default App;

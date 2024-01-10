@@ -1,47 +1,45 @@
-.Header {
-    padding: 20px;
-    position: sticky;
-    top: 0;
+.header {
+  padding: 20px;
+  position: sticky;
+  top: 0;
 }
 
-.Header-logo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    backdrop-filter: saturate(180%) blur(20px);
-    background-color: rgba(255,255,255,0.7);
-    backdrop-filter: blur(20px);
-    box-shadow: 2px 4px 16px rgba(0,0,0,.16);
+.headerLogo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: saturate(180%) blur(20px);
+  background-color: rgba(255,255,255,0.7);
+  backdrop-filter: blur(20px);
+  box-shadow: 2px 4px 16px rgba(0,0,0,.16);
 }
 
-.Header-logo button {
-    padding: 1px 10px;
-    cursor: pointer;
-    border: none;
-    background-color: transparent;
-    font-size: medium;
-    font-weight: 700;
+.headerLogo button {
+  padding: 1px 10px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  font-size: medium;
+  font-weight: 700;
 }
-
 
 @media only screen and (max-width: 600px) {
-    .Header-logo {
-     border-radius: 5px;
-     padding: 10px;
-    }
- }
- 
- @media only screen and (min-width: 601px) and (max-width: 992px) {
-    .Header-logo {
-        border-radius: 10px;
-        padding: 10px;
-       }
- }
- 
- @media only screen and (min-width: 993px) {
-    .Header-logo {
-        border-radius: 15px;
-        padding: 10px;
-       }
- }
- 
+  .headerLogo {
+    border-radius: 5px;
+    padding: 10px;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+  .headerLogo {
+    border-radius: 10px;
+    padding: 10px;
+  }
+}
+
+@media only screen and (min-width: 993px) {
+  .headerLogo {
+    border-radius: 15px;
+    padding: 10px;
+  }
+}

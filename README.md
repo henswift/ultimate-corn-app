@@ -1,31 +1,5 @@
 The Ultimate Corn App
 
-
-
-Questoins: 
-
- - What is the best method for adding another planting or section?
-    - Send it to the state and do it from there?
-    - Send it to the api directly from the form?
-
-- Why doesn't it fill in the picture and content when I add another planting?
-    - I could just force a reload. 
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Functionality that I need:
     Plantings
         What kind
@@ -36,10 +10,7 @@ Functionality that I need:
         What time
         What conditions
         The corn stage
-        What feild 
-
-
-    Styled clean like Apple. 
+        What feild  
 
     White #fff
     Grey background #f5f5f7
@@ -57,7 +28,7 @@ Functionality that I need:
 
 
 
-    @media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
 }
 
 @media only screen and (min-width: 601px) and (max-width: 992px) {

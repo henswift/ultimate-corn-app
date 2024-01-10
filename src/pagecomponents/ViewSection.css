@@ -41,7 +41,7 @@
 .sectionFooter {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     padding: 10px 15px 30px 15px;
 }
 
@@ -74,29 +74,29 @@
 }
 
 .sectionDefaultBox {
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-    background-color: #fff;
-    box-shadow: 2px 4px 12px rgba(0,0,0,.08);
-    align-items: center;
-    width: 120px;
-    height: 150px;
-    overflow: hidden;
-    padding: 0px;
-    margin: 15px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 2px 4px 12px rgba(0,0,0,.08);
+  align-items: center;
+  width: 120px;
+  height: 150px;
+  overflow: hidden;
+  padding: 0px;
+  margin: 15px;
 }
 
 .sectionDefaultBox p {
-    padding: 5px 10px;
+  padding: 5px 10px;
 }
 
 .sectionDefaultBox img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .sectionDefaultBox:hover {
-    box-shadow: 2px 4px 16px rgba(0,0,0,.16);
+  box-shadow: 2px 4px 16px rgba(0,0,0,.16);
 }

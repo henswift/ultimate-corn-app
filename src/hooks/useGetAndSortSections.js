@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useEffect } from 'react';
 
+// Pull data from th API and send it to the state
 function useGetAndSortSections(setApp) {
   useEffect(() => {
     const fetchData = async () => {
@@ -16,12 +17,12 @@ function useGetAndSortSections(setApp) {
         
         setApp({ type: 'loadPlantings', payload: allPlantings });
         setApp({ type: 'loadSections', payload: sections });
-      } catch (err) {
-        console.error('Error fetching mockup api data:', err.message);
-      }
+      } catch (error) {
+        console.error('Error fetching mockup api data:', error.message);
+      };
     };
     fetchData();
   }, [setApp]); 
-}
+};
 
 export default useGetAndSortSections;

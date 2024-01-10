@@ -1,8 +1,8 @@
 import React, { useState, useContext} from 'react';
-import './SectionDivTotal.css';
-import { AppContext } from '../store/AppContext';
 import { Link } from 'react-router-dom';
+import { AppContext } from '../store/AppContext';
 import ViewSection from './ViewSection';
+import './SectionDivTotal.css';
 
 function SectionDivTotal() {
   const { app } = useContext(AppContext);
@@ -10,22 +10,22 @@ function SectionDivTotal() {
   const [selectedSection, setSelectedSection] = useState(null);
 
   return (
-    <div className='Section-container'>
+    <div className='sectionContainer'>
       {sections.map((section) => (
         <Link
           to={`/section/${section.id}`}
           key={section.id}
           onClick={() => setSelectedSection(section)}
         >
-          <div className='Section-default-box'>
+          <div className='sectionDefaultBox'>
             <p>{section.name}</p>
             <img src={section.image} alt='section' />
           </div>
         </Link>
-      ))}
+      ))};
       {selectedSection && <ViewSection section={selectedSection} />}
     </div>
   );
-}
+};
 
 export default SectionDivTotal;

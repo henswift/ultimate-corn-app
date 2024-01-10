@@ -1,39 +1,39 @@
-.Planting-tab {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    padding: 0px 30px;
-    flex: 1;
-  }
+.plantingTab {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 30px;
+  flex: 1;
+}
 
-  .Item-section {
-    width: 100%;
-    height: fit-content;
-    display: flex;
-    flex-direction: column;
-    background-color: #fff;
-    border-radius: 20px;
-    box-shadow: 2px 4px 12px rgba(0,0,0,.08);
-    margin-bottom: 50px;
-  }
+.itemSection {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 2px 4px 12px rgba(0,0,0,.08);
+  margin-bottom: 50px;
+}
 
-  .Section-contents {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+.sectionContents {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  .Section-titles {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 15px;
-  }
+.sectionTitles {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+}
 
-  .Section-titles button {
-    padding: 1px 10px;
-    cursor: pointer;
-    border: none;
-    background-color: transparent;
-    font-size: medium;
-    font-weight: 700;
-  }
+.sectionTitles button {
+  padding: 1px 10px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  font-size: medium;
+  font-weight: 700;
+}
