@@ -20,6 +20,8 @@ export const initAppObject = {
     // };
   addingPickingEdit: null,
     // State to hold the planting that is getting picked
+  editingPlanting: null,
+    // State to hold the planting that is getting edited
   results: null, 
     // holds the search results
     // expect an array of strings

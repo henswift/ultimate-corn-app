@@ -35,6 +35,9 @@ export const appReducer = (state, action) => {
     case 'plantingToEdit':
       newState.plantingToEdit = payload;
       break;
+    case 'editingPlanting':
+      newState.editingPlanting = payload;
+      break;
     default:
       console.warn(`No action type found for ${type}`);
   };
