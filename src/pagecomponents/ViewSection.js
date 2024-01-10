@@ -70,7 +70,7 @@ function ViewSection() {
 									<img src={planting.image} alt={planting.name || "Planting Image"} />
 								</div>
 							</Link>
-						))};
+						))}
 					</div>
 				</div>
 			</div>

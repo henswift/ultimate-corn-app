@@ -22,7 +22,7 @@ function SectionDivTotal() {
             <img src={section.image} alt='section' />
           </div>
         </Link>
-      ))};
+      ))}
       {selectedSection && <ViewSection section={selectedSection} />}
     </div>
   );

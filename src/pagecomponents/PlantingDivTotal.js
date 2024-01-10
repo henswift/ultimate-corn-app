@@ -22,7 +22,7 @@ function PlantingDivTotal() {
             <img src={planting.image} alt='corn' />
           </div>
         </Link>
-      ))};
+      ))}
       {selectedPlanting && <ViewPlanting planting={selectedPlanting} />}
     </div>
   );
