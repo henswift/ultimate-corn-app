@@ -1,5 +1,4 @@
 import React from 'react';
-import SearchPlantings from '../../pagecomponents/SearchPlantings';
 import './HomeTab.css';
 
 function HomeTab() {
@@ -8,7 +7,7 @@ function HomeTab() {
         <div className='defaultBox'>
           <h3>Welcome to CornTop!</h3>
         </div>
-        <SearchPlantings />
+        {/* <SearchPlantings /> */}
     </div>
   );
 };

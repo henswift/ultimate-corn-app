@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useEffect } from 'react';
 
-// Pull data from th API and send it to the state
+// Pull data from the MockAPI and send it to the state.
 function useGetAndSortSections(setApp) {
   useEffect(() => {
     const fetchData = async () => {

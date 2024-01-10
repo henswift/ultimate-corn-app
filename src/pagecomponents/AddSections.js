@@ -5,6 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { AppContext } from '../store/AppContext';
 import './AddSections.css';
 
+// Displays the form for adding new sections.
 function AddSections() {
   const { setApp } = useContext(AppContext);
   const navigate = useNavigate();

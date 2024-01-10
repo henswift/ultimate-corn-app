@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './AppFooter.css';
 
+// Footer displayed on all pages.
 function Footer() {
   return (
     <div className='footer'>

@@ -4,6 +4,7 @@ import axios from 'axios';
 import { AppContext } from '../store/AppContext';
 import './ViewSection.css';
 
+// View a single section (and all the plantings in that section) and allow editing and deleting.
 function ViewSection() {
 	const { id } = useParams();
 	const { app, setApp } = useContext(AppContext);

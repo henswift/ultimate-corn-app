@@ -40,8 +40,8 @@ function App() {
           </Routes>
           <Footer/>
       </div>
-      {app.plantingToEdit ? <div> Editing... {app.plantingToEdit.name}</div> : null}
-      {app.plantingToEdit && <div>Editing Again...</div>}
+      {/* {app.plantingToEdit ? <div> Editing... {app.plantingToEdit.name}</div> : null}
+      {app.plantingToEdit && <div>Editing Again...</div>} */}
     </AppContext.Provider>
   );
 };

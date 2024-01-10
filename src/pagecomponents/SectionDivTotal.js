@@ -4,6 +4,7 @@ import { AppContext } from '../store/AppContext';
 import ViewSection from './ViewSection';
 import './SectionDivTotal.css';
 
+// Retrieves all the sections from the state and returns them in a div.
 function SectionDivTotal() {
   const { app } = useContext(AppContext);
   const { sections } = app;

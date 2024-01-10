@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from "react-router-dom";
 import './Appheader.css';
 
+// Header displayed on all pages. 
 function Header() {
   const navigate = useNavigate();
   const handleBackButtonClick = () => {

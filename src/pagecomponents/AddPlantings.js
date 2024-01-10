@@ -4,6 +4,7 @@ import axios from 'axios';
 import { AppContext } from '../store/AppContext';
 import './AddPlantings.css';
 
+// Displays the form for adding new plantings. 
 function AddPlantings() {
   const { app, setApp } = useContext(AppContext);
   const navigate = useNavigate();

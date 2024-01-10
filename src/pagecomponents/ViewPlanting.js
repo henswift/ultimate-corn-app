@@ -4,6 +4,7 @@ import axios from 'axios';
 import { AppContext } from '../store/AppContext';
 import './ViewPlanting.css';
 
+// View a single planting and allow editing and deleting.
 function ViewPlanting() {
   const { id } = useParams();
   const { app, setApp } = useContext(AppContext);

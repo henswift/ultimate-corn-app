@@ -4,6 +4,7 @@ import { AppContext } from '../store/AppContext';
 import ViewPlanting from './ViewPlanting';
 import './PlantingDivTotal.css';
 
+// Retrieves all the plantings from the state and returns them in a div. 
 function PlantingDivTotal() {
   const { app } = useContext(AppContext);
   const { plantings } = app;
