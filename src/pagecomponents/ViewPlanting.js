@@ -17,45 +17,16 @@ function ViewPlanting() {
       navigate('/planting');
     } catch (error) {
       console.error('Error deleting planting:', error.message);
-    }
+    };
   };
 
   const handleBackButtonClick = () => {
     navigate(-1);
   };
 
-  const handleEditButtonClick = () => {
-    setApp({ type: 'plantingToEdit', payload: planting });
-  };
-
-  const handleSaveChanges = async () => {
-    try {
-      // Make an API request to update the planting
-      await axios.put(`https://657a4ab21acd268f9afae0fa.mockapi.io/sections/1/plantings/${app.editingPlanting.id}`, {
-        // Include the updated fields from your form or state
-        // For example: name, createdAt, notes, sectionId, image, etc.
-      });
-
-      setApp({ type: 'updatePlanting', payload: app.editingPlanting });
-      setApp({ type: 'plantingToEdit', payload: null });
-      navigate('/planting');
-
-    } catch (error) {
-      console.error('Error updating planting:', error.message);
-    }
-  };
-  
-
   return (
     <div className="singlePlantingMain">
-      <div className='singlePlantingSection'>
-        {app.editingPlanting ? (
-          <div className="editingFields">
-            {/* Render your editing fields and form components here */}
-            {/* You can use values from app.editingPlanting to pre-fill the fields */}
-            <button onClick={handleSaveChanges}>Save Changes</button>
-          </div>
-        ) : (
+        <div className='singlePlantingSection'>
           <div className="singlePlantingText">
             <h2>{planting?.name}</h2>
             <h3>Date Planted</h3>
@@ -65,20 +36,17 @@ function ViewPlanting() {
             <h3>Section</h3>
             <p>- {planting?.sectionId}</p>
           </div>
-        )}
-
-        <div className="singlePlantingImage">
-          <img src={planting?.image} alt="" />
+          <div className="singlePlantingImage">
+            <img src={planting?.image} alt="" />
+          </div>
+          <div className='singlePlantingFooter'>
+            {/* <button onClick={() => setApp({type: 'plantingToEdit', payload: planting})}>Picking</button> */}
+            <button onClick={() => handleDeletePlanting(planting.id)}>Delete</button>
+            <button type='button' onClick={handleBackButtonClick}>Back</button>
+          </div>
         </div>
-        
-        <div className='singlePlantingFooter'>
-          <button onClick={handleEditButtonClick}>Edit</button>
-          <button onClick={() => handleDeletePlanting(planting.id)}>Delete</button>
-          <button type='button' onClick={handleBackButtonClick}>Back</button>
-        </div>
-      </div>
     </div>
   );
-}
+};
 
 export default ViewPlanting;
